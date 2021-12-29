@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ .Lang }}" class="{{ .Type }} {{ .Kind }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ if .Params.Summary }}
+      <meta property="og:description" content="{{ .Params.Summary}}">
+    {{ else }}
+      <meta property="og:title" content="{{ .Params.Title }}">
+    {{ end }}
+    {{ with .Params.splash }}
+      <meta property="og:image" content="{{ . | relURL }}">
+    {{ else }}
+      <meta property="og:image" content="{{ "images/nosignal_square.jpg" | relURL }}">
+    {{ end }}
+    <title>Free! Dead Pixel</title>
+    {{ if .Site.BuildDrafts }}
+      <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
+    {{ else }}
+      <style>
+        {{ readFile "static/css/base.css" | safeCSS }}
+      </style>
+    {{ end }}
+    <script type="text/javascript">
+      function positionPixel() {
+        var x = Math.floor(Math.random() * 834);
+        var y = Math.floor(Math.random() * 834);
+        document.getElementById('dead-pixel').style = "position: absolute; left: " + x + "px; top: " + y + "px;"
+      };
+    </script>
+  </head>
+  <body>
+    {{ block "main" . }}
+      {{ .Content }}
+    {{ end }}
+
+    <section class="footer">
+      <div class="wrap">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">"dead-pixel.png" was created by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://where.coraline.codes">Coraline Ada Ehmke</a> and is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      positionPixel();
+    </script>
+
+  </body>
+</html>

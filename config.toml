@@ -1,0 +1,5 @@
+baseURL = "https://dead-pixel.wtf"
+languageCode = "en-us"
+title = "FREE Dead Pixel"
+buildFuture = true
+disableHugoGeneratorInject = true
