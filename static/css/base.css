@@ -1,7 +1,7 @@
 html {
   background: #000;
   color: #ff0000;
-  font-size: .625rem;
+  font-size: .525rem;
   font-family: monospace;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -12,8 +12,8 @@ html {
 
 body {
   text-align: center;
-  height: 100%;
-  padding: 25;
+  height: 75%;
+  padding: 0 10%; */
 }
 
 a {
