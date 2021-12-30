@@ -12,7 +12,7 @@
     {{ with .Params.splash }}
       <meta property="og:image" content="{{ . | relURL }}">
     {{ else }}
-      <meta property="og:image" content="{{ "images/nosignal_square.jpg" | relURL }}">
+      <meta property="og:image" content="{{ "images/dead-pixel.png" | relURL }}">
     {{ end }}
     <title>Free! Dead Pixel</title>
     {{ if .Site.BuildDrafts }}
@@ -22,6 +22,7 @@
         {{ readFile "static/css/base.css" | safeCSS }}
       </style>
     {{ end }}
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico">
     <script type="text/javascript">
       function positionPixel() {
         var x = Math.floor(Math.random() * 100);
