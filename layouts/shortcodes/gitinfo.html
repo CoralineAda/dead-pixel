@@ -1,9 +1,3 @@
-{{ range .Site.Pages.ByDate | first 1 }}
-  {{ if .GitInfo }}
-    {{ if gt .Site.Home.GitInfo.AuthorDate .GitInfo.AuthorDate }}
-      {{ partial "gitinfo" .Site.Home }}
-    {{ else }}
-      {{ partial "gitinfo" . }}
-    {{ end }}
-  {{ end }}
+{{ with .Page }}
+  {{ partial "gitinfo" . }}
 {{ end }}
