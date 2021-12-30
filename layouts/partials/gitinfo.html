@@ -1,9 +1,11 @@
 {{ with .GitInfo }}
   <section>
     <p>
-      <a href="https://github.com/CoralineAda/dead-pixel/tree/{{ .Hash }}">
+      SHA: <a href="https://github.com/CoralineAda/dead-pixel/tree/{{ .Hash }}">
         {{ .Hash }}
       </a>
+      <br />
+      <time>{{ .AuthorDate.UTC }}</time>
     </p>
   </section>
 {{ end }}

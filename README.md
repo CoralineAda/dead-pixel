@@ -1,6 +1,6 @@
-# dead-pixel.io
+# Dead Pixel
 
-This was an idea I had when I was high.
+[dead-pixel.wtf](https://dead-pixel.wtf/)
 
 ## Local development
 
