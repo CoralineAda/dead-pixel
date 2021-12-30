@@ -20,6 +20,21 @@ body {
   background-color: transparent;
 }
 
+a {
+  color: #ff0000;
+  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+footer p {
+  margin: 3rem;
+}
+
 #ee-fixe {
   margin: 0 auto;
   position: relative;
@@ -29,32 +44,6 @@ body {
 
 #git-info {
   font-size: .75rem;
-}
-
-a {
-  color: #ff0000;
-  text-decoration: underline dotted;
-  -webkit-text-decoration: underline dotted;
-}
-
-a:hover {
-  color: #bb0000;
-  font-weight: 800;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 4rem;
-}
-
-h2 {
-  background: #ff0000;
-  color: #fff;
-  padding: 2.3rem;
-}
-
-footer p {
-  margin: 2rem;
 }
 
 @media (min-width: 200px) {
